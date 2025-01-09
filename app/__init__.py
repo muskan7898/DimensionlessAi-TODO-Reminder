@@ -20,7 +20,7 @@ def create_app():
 
     @app.route("/")
     def hello_world():
-        return "<p>Hello, World!</p>"
+        return "<p>WELCOME!!TODO App</p>"
 
     return app
     
