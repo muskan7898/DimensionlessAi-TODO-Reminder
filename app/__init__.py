@@ -1,7 +1,6 @@
 from flask import Flask
-from app.database import mongo
+from main import mongo
 from app.routes import todo_bp as todo
-
 
 
 def create_app():
