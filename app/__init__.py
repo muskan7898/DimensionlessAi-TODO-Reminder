@@ -20,7 +20,7 @@ def create_app():
 
     @app.route("/")
     def hello_world():
-        return "<p>WELCOME!! Todo App Reminder</p>"
+        return "<p>WELCOME, Todo App Reminder</p>"
 
     return app
     
