@@ -1,13 +1,19 @@
 from flask import Flask
-from main import mongo
+from app.database import mongo
 from app.routes import todo_bp as todo
 
 
 def create_app():
+
+    MONGO_CONNECTION_URI = os.environ.get(
+        "MONGO_URL",
+        "mongodb://localhost:27017/todo_db"
+    )
+
     app = Flask(__name__)
 
     ''' MongoDB Configuration '''
-    app.config['MONGO_URI'] = 'mongodb://localhost:27017/todo_db'
+    app.config['MONGO_URI'] = MONGO_CONNECTION_URI
 
     '''Initialize MongoDB '''
     # pymango.init_app(app) or 

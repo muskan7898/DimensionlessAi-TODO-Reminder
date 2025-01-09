@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from bson import ObjectId
-from main import mongo
+from app.database import mongo
 
 todo_bp = Blueprint('todo', __name__)
 
