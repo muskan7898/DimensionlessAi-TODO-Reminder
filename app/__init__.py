@@ -6,7 +6,7 @@ import os
 def create_app():
 
     MONGO_CONNECTION_URI = os.environ.get(
-        "MONGO_URL",
+        "MONGO_URI",
         "mongodb://localhost:27017/todo_db"
     )
 
